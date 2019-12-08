@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+      "AlbumItem": "/components/albumItem/albumItem"
+    },
+    "enablePullDownRefresh": true
+}

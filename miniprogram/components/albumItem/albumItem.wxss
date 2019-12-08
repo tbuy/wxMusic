@@ -1,0 +1,37 @@
+.albumItem {
+  height: auto;
+  width: 230rpx;
+  position: relative;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+.albumImage {
+  width: 230rpx;
+  height: 230rpx;
+  border-radius: 8rpx;
+}
+.count {
+  font-size: 20rpx;
+  color: pink;
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+  line-height: 30rpx;
+}
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+text {
+  vertical-align: middle;
+  margin-left: 5rpx;
+}
+.title {
+  padding: 5rpx 10rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+}

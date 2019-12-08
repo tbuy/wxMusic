@@ -1,0 +1,8 @@
+<view class="albumItem" bindtap="goAlbum" data-id="{{album._id}}">
+  <image src="{{album.image}}" class="albumImage" mode="scaleToFill"></image>
+  <view class="count">
+    <image src="/images/headset.png" class="icon"></image>
+    <text>{{album.count}}</text>
+  </view>
+  <view class="title">{{album.title}}</view>
+</view>

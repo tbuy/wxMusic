@@ -1,0 +1,15 @@
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerlist}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.image}}" class="bannerImage" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="albumlist">
+    <block wx:for="{{albumlist}}" wx:key="*this">
+      <AlbumItem album="{{item}}"></AlbumItem>
+    </block>
+    <view style="width: 230rpx; height: 0"></view>
+  </view>
+</view>
