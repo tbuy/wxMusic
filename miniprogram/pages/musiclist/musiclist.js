@@ -5,20 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    musiclist: [],
   },
-  getAlbum(){
+  getAlbumDetail(id){
     wx.cloud.callFunction({
       name: 'music',
       data: {
-        id: 1,
-        $url: 'musiclist'
+        id: id,
+        $url: 'albumDetail'
       },
       success: res=>{
         console.log(res.result.data)
       },
       fail: err=>{
-
+      }
+    })
+  },
+  PAGECOUNT: 10,
+  getMusiclist(id) {
+    wx.cloud.callFunction({
+      name: 'music',
+      data: {
+        start: this.data.musiclist.length,
+        count: this.PAGECOUNT,
+        albumId: id,
+        $url: 'musiclist'
+      },
+      success: res => {
+        console.log(res.result.data)
+      },
+      fail: err => {
       }
     })
   },
@@ -26,7 +42,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getAlbum()
+    this.getAlbumDetail(options.id)
+    this.getMusiclist(options.id)
   },
 
   /**
