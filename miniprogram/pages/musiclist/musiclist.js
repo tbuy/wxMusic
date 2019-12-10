@@ -6,6 +6,7 @@ Page({
    */
   data: {
     musiclist: [],
+    loadingState: 0
   },
   getAlbumDetail(id){
     wx.cloud.callFunction({
@@ -15,26 +16,38 @@ Page({
         $url: 'albumDetail'
       },
       success: res=>{
-        console.log(res.result.data)
+        console.log(111,res.result.data)
       },
       fail: err=>{
+      },
+      complete: () => {
+        this.setData({
+          loadingState: this.data.loadingState + 1
+        })
       }
     })
   },
   PAGECOUNT: 10,
   getMusiclist(id) {
+    console.log(id)
     wx.cloud.callFunction({
       name: 'music',
       data: {
         start: this.data.musiclist.length,
         count: this.PAGECOUNT,
-        albumId: id,
+        id: id,
         $url: 'musiclist'
       },
       success: res => {
-        console.log(res.result.data)
+        console.log(222,res.result.data)
       },
       fail: err => {
+        console.log(err)
+      },
+      complete:()=>{
+        this.setData({
+          loadingState: this.data.loadingState + 1
+        })
       }
     })
   },
@@ -42,10 +55,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    getApp().setWatcher(this.data, this.watch); 
+
+    wx.showLoading({
+      title: '加载中',
+    })
     this.getAlbumDetail(options.id)
     this.getMusiclist(options.id)
+    
   },
 
+  watch: {
+    loadingState:val => {
+      if(val == 2){
+        wx.hideLoading()
+      }
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

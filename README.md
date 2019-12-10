@@ -10,3 +10,8 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+
+## 监听器的实现
+
+- (https://blog.csdn.net/xuyangxinlei/article/details/81408200)
+

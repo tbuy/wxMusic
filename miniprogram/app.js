@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    
+
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -16,5 +16,35 @@ App({
     }
 
     this.globalData = {}
+  },
+
+  /**
+   * 设置监听器
+   * @parma data { object}
+   * @parma watch { object}
+   */
+
+  setWatcher(data, watch) { 
+    Object.keys(watch).forEach(key => { // 将watch对象内的key遍历
+      this.observe(data, key, watch[key]); // 监听data内的v属性，传入watch内对应函数以调用
+    })
+  },
+
+  /**
+   * 监听属性 并执行监听函数
+   */
+  observe(obj, key, watchFun) {
+    var val = obj[key]; // 给该属性设默认值
+    Object.defineProperty(obj, key, {
+      configurable: true,
+      enumerable: true,
+      set: function (value) {
+        val = value;
+        watchFun(value, val); // 赋值(set)时，调用对应函数
+      },
+      get: function () {
+        return val;
+      }
+    })
   }
 })

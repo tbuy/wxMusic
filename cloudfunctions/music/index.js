@@ -22,7 +22,7 @@ exports.main = async (event, context) => {
   });
   //音乐列表
   app.router('musiclist', async (ctx, next) => {
-    ctx.body = await db.collection('musiclist').where({ albumId: event.id }).skip(event.start).limit(event.count).get().then(res => {
+    ctx.body = await db.collection('musiclist').where({ albumId: 3 }).skip(event.start).limit(event.count).get().then(res => {
       return res
     })
   });
