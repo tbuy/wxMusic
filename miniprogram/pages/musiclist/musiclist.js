@@ -6,6 +6,7 @@ Page({
    */
   data: {
     musiclist: [],
+    albumDetail: [],
     loadingState: 0
   },
   getAlbumDetail(id){
@@ -16,7 +17,9 @@ Page({
         $url: 'albumDetail'
       },
       success: res=>{
-        console.log(111,res.result.data)
+        this.setData({
+          albumDetail: res.result.data
+        })
       },
       fail: err=>{
       },
@@ -39,7 +42,9 @@ Page({
         $url: 'musiclist'
       },
       success: res => {
-        console.log(222,res.result.data)
+        this.setData({
+          musiclist: res.result.data
+        })
       },
       fail: err => {
         console.log(err)

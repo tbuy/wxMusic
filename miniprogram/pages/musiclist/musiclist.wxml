@@ -1,2 +1,20 @@
-<!--miniprogram/pages/musiclist/musiclist.wxml-->
-<text>miniprogram/pages/musiclist/musiclist.wxml</text>
+<view>
+<view class="album"></view>
+
+<view class="musiclist">
+<block wx:for="{{musiclist}}" wx:key="*this">
+  <view class="music">
+    <view class="index">{{index}}</view>
+    <view>
+      <view>{{item.title}}</view>
+      <view>{{item.author}}</view>
+    </view>
+  </view>
+</block>
+</view>
+
+  <movable-area style="height: 200px; width: 200px; background: red;">
+    <movable-view style="height: 50px; width: 50px; background: blue;"  direction="all">
+    </movable-view>
+  </movable-area>
+</view>
