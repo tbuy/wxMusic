@@ -3,7 +3,7 @@
 
 <view class="musiclist">
 <block wx:for="{{musiclist}}" wx:key="*this">
-  <view class="music">
+  <view class="music" bindtap="goMusic" data-index="{{index}}">
     <view class="index">{{index}}</view>
     <view>
       <view>{{item.title}}</view>

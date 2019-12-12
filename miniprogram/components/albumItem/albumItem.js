@@ -26,5 +26,10 @@ Component({
         url: '/pages/musiclist/musiclist?id=' + e.currentTarget.dataset.id,
       })
     },
+  },
+  lifetimes: {
+    ready(){
+      
+    }
   }
 })

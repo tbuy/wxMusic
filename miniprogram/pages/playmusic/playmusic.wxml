@@ -1,0 +1,18 @@
+<view class="playmusic">
+  <view>动画1</view>
+  <view>动画2</view>
+  <view class="control">
+    <view class="time">0:00</view>
+    <view>
+      <movable-area class="movable-area">
+        <movable-view class="movable-view" direction="horizontal" damping="1000" x="{{movableDis}}" bindchange="changeMovable">
+        </movable-view>
+      </movable-area>
+      <progress percent="{{progress}}" stroke-width="5" color="pink" />
+    </view>
+    <view class="time">12:00</view>
+    <view class="btnline">
+      按钮
+    </view>
+  </view>
+</view>

@@ -56,6 +56,12 @@ Page({
       }
     })
   },
+  goMusic(e){
+    console.log(123)
+    wx.navigateTo({
+      url: '/pages/playmusic/playmusic?id=' + e.currentTarget.dataset.index,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
