@@ -1,7 +1,8 @@
 <view class="playmusic">
   <view>动画1</view>
   <view>动画2</view>
-  <view class="control">
+  <musicPlayer></musicPlayer>
+  <!-- <view class="control">
     <view class="time">0:00</view>
     <view>
       <movable-area class="movable-area">
@@ -14,5 +15,5 @@
     <view class="btnline">
       按钮
     </view>
-  </view>
+  </view> -->
 </view>
