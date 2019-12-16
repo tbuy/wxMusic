@@ -1,1 +1,25 @@
-/* components/musicPlayer/musicPlayer.wxss */
+.musicPlayer {
+
+}
+.oneline {
+  display: flex;
+  justify-content: space-between;
+  pading: 0 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.movable-area {
+  height: 10rpx; 
+  width:90%; 
+  background: red;
+}
+.movable-view {
+  height: 20rpx; 
+  width: 20rpx; 
+  background: blue; 
+  border-radius: 50%
+}
+.twoline {
+    display: flex;
+  justify-content: space-between;
+}

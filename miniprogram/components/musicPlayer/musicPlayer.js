@@ -14,7 +14,10 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    musicTime:{
+      startTime:'0:00',
+      endTime:'0:00'
+    }
   },
 
   /**

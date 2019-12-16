@@ -5,25 +5,5 @@
   position: relative;
 }
 
-.control {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  pading: 0 20rpx;
-  font-size: 30rpx;
-  color: #fff;
-  bottom: 100rpx;
-  width: 100%;
-}
-.movable-area {
-  height: 10rpx; 
-  width:600rpx; 
-  background: red;
-}
-.movable-view {
-  height: 20rpx; 
-  width: 20rpx; 
-  background: blue; 
-  border-radius: 50%
-}
+
 

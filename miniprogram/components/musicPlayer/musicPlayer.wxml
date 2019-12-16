@@ -1,3 +1,18 @@
-<view bindtap="playMusic">播放</view>
-<view bindtap="pauseMusic">暂停</view>
-<view bindtap="stopMusic">停止</view>
+<view class="musicPlayer">
+  <view class="oneline">
+    <view class="time">{{musicTime.startTime}}</view>
+    <view>
+      <movable-area class="movable-area">
+        <movable-view class="movable-view" direction="horizontal" damping="1000" x="{{movableDis}}" bindchange="changeMovable">
+        </movable-view>
+      </movable-area>
+      <progress percent="{{progress}}" stroke-width="5" color="pink" />
+    </view>
+    <view class="time">{{musicTime.endTime}}</view>
+  </view>
+  <view class="twoline">
+    <view bindtap="pre">按钮1</view>
+    <view bindtap="toggle">按钮2</view>
+    <view bindtap="next">按钮3</view>
+  </view>
+</view>
