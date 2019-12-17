@@ -5,7 +5,8 @@
     "pages/blog/blog",
     "pages/profile/profile",
     "pages/demo/demo",
-    "pages/playmusic/playmusic"
+    "pages/playmusic/playmusic",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
