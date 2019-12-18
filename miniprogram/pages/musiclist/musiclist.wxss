@@ -1,18 +1,49 @@
 .album {
   width: 100%;
   height: 300rpx;
-  background-color: pink;
-}
-.music {
   display: flex;
-  height: 80rpx;
-  background-color: yellow;
+  padding: 50rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.albumBg {
+  width: 100%;
+  height: 300rpx;
+  background: url('https://t12.baidu.com/it/u=23452940,1521604703&fm=76');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.albumImage {
+  width: 200rpx;
+  height: 200rpx;
+}
+.albumTitle {
+  margin-left: 30rpx;
+  font-size: 40rpx;
+  margin-top: 10rpx;
+  color: #fff;
+}
+
+.musiclist {
+  margin-top: 30rpx;
+}
+.item {
+  height: 100rpx;
+  display: flex;
   font-size: 30rpx;
-  padding: 20rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 10rpx;
 }
 .index {
-  color: #ccc;
-  line-height: 80rpx;
-  margin-right: 30rpx;
+  line-height: 100rpx;
+  margin: 0 40rpx;
 }
+.name {
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+

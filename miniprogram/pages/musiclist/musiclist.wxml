@@ -1,20 +1,18 @@
 <view>
-<view class="album"></view>
-
-<view class="musiclist">
-<block wx:for="{{musiclist}}" wx:key="*this">
-  <view class="music" bindtap="goMusic" data-index="{{index}}">
-    <view class="index">{{index}}</view>
-    <view>
-      <view>{{item.title}}</view>
-      <view>{{item.author}}</view>
-    </view>
+  <view class="album">
+    <view class="albumBg"></view>
+    <image class="albumImage" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76"></image>
+    <view class="albumTitle">musicName</view>
   </view>
-</block>
-</view>
-
-  <movable-area style="height: 200px; width: 200px; background: red;">
-    <movable-view style="height: 50px; width: 50px; background: blue;"  direction="all">
-    </movable-view>
-  </movable-area>
+  <view class="musiclist">
+    <block wx:for="{{5}}" wx:key="{{item.id}}" >
+      <view class="item" bindtap="goMusic" data-index="{{index}}">
+        <view class="index">{{index + 1}}</view>
+        <view class="name">
+          <view>不能说的秘密</view>
+          <view>范特西 - 周杰伦</view>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>

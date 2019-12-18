@@ -1,9 +1,25 @@
 .playmusic {
-  width: 100%;
-  height: 100vh;
-  background-color: #ccc;
-  position: relative;
 }
-
+.bg {
+  background: url('https://t12.baidu.com/it/u=23452940,1521604703&fm=76');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.disk {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 

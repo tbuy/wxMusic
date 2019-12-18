@@ -57,7 +57,6 @@ Page({
     })
   },
   goMusic(e){
-    console.log(123)
     wx.navigateTo({
       url: '/pages/playmusic/playmusic?id=' + e.currentTarget.dataset.index,
     })

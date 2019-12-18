@@ -1,6 +1,5 @@
 <view class="playmusic">
-  <view>动画1</view>
-  <view>动画2</view>
+  <!-- <view class="bg"></view>
+  <image src="../../images/disk.png" class="disk"></image> -->
   <musicPlayer></musicPlayer>
-
 </view>
