@@ -1,0 +1,5 @@
+<view class="search">
+  <text class="iconfont icon-bianji"></text>
+  <view class="searchInput">
+  </view>
+</view>

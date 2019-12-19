@@ -1,31 +1,47 @@
-@import "/pages/app.wxss";
+@import "../../iconfont.wxss";
 .musicPlayer {
-  /* position: absolute;
-  bottom: 100rpx;
-  background-color: pink;
   width: 100%;
-  height: 100vh; */
+  position: absolute;
+  bottom: 0;
+  padding: 40rpx;
+  box-sizing: border-box;
 }
 .oneline {
   display: flex;
   justify-content: space-between;
-  padding: 0 20rpx;
   font-size: 30rpx;
   color: #fff;
+  position: relative;
 }
 .movable-area {
-  height: 10rpx; 
-  width:90%; 
-  background: red;
+  width:500rpx; 
+  position: absolute;
+  top: 10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 .movable-view {
-  height: 20rpx; 
-  width: 20rpx; 
-  background: blue; 
-  border-radius: 50%
+  height: 24rpx; 
+  width: 24rpx; 
+  background: #d43c33; 
+  border-radius: 50%;
+}
+progress {
+  width: 500rpx;
+  position: absolute;
+  top: 18rpx;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .twoline {
-    display: flex;
+  display: flex;
   justify-content: space-between;
+  padding: 0 100rpx;
+  margin-top: 20rpx;
 
+}
+.iconfont {
+  font-size: 100rpx;
+  color: #fff;
 }

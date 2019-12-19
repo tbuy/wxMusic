@@ -1,19 +1,19 @@
 <view class="musicPlayer">
-  <!-- <view class="oneline">
+  <view class="oneline">
     <view class="time">{{musicTime.startTime}}</view>
     <view>
       <movable-area class="movable-area">
-        <movable-view class="movable-view" direction="horizontal" damping="1000" x="{{movableDis}}" bindchange="changeMovable">
+        <movable-view class="movable-view" direction="horizontal" damping="1000" bindchange="changeMovable" x="{{movableDis}}">
         </movable-view>
       </movable-area>
-      <progress percent="{{progress}}" stroke-width="5" color="pink" />
+      <progress percent="{{progress}}" stroke-width="4" color="red" />
     </view>
     <view class="time">{{musicTime.endTime}}</view>
-  </view> -->
-  <view class="twoline">
-    <text bindtap="pre" class="iconfont icon-shangyishou" style="color: red; font-size: 40rpx;"></text>
-    <!-- <view bindtap="toggle" class="iconfont icon-shangyishou"></view>
-    <view bindtap="next" class="iconfont icon-shangyishou"></view> -->
   </view>
-  <view class="pub">pub</view>
+  <view class="twoline">
+    <text bindtap="pre" class="iconfont icon-diyiyeshouyeshangyishou"></text>
+    <text bindtap="toggle" class="iconfont icon-bofang3" wx:if="{{true}}"></text>
+    <text bindtap="toggle" class="iconfont icon-zanting" wx:else></text>
+    <text bindtap="next" class="iconfont icon-zuihouyiyemoyexiayishou"></text>
+  </view>
 </view>

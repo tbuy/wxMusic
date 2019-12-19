@@ -1,2 +1,5 @@
-<!--pages/comment/comment.wxml-->
-<text>pages/comment/comment.wxml</text>
+
+<view>
+<x-search></x-search>
+<x-commentItem></x-commentItem>
+</view>

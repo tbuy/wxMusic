@@ -1,5 +1,5 @@
 <view class="playmusic">
-  <!-- <view class="bg"></view>
-  <image src="../../images/disk.png" class="disk"></image> -->
+  <view class="bg"></view>
+  <image src="../../images/disk.png" class="disk"></image>
   <musicPlayer></musicPlayer>
 </view>

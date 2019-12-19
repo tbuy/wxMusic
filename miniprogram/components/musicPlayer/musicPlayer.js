@@ -16,12 +16,10 @@ Component({
   data: {
     musicTime: {
       startTime: '0:00',
-      endTime: '0:00'
+      endTime: '3:00'
     },
     movableDis: 0,
-    progress: 0,
-
-
+    progress: 20,
   },
   movableAreaVal: 0,
   movableViewVal: 0,
