@@ -1,0 +1,5 @@
+<view class="bottomWrite">
+  <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus maxlength="60"/>
+  <view class="send">发送</view>
+  <text class="iconfont icon-close close" bindtap="close"></text>
+</view>

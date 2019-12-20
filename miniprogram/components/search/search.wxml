@@ -1,5 +1,8 @@
 <view class="search">
   <text class="iconfont icon-bianji"></text>
   <view class="searchInput">
+    <text class="iconfont icon-search searchIcon"></text>
+     <input class="input" auto-focus placeholder="请输入关键字"/>
   </view>
+  <view class="searchBtn">搜索</view>
 </view>
