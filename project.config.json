@@ -77,8 +77,8 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/commentlist/commentlist",
-					"pathName": "pages/commentlist/commentlist",
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
 					"scene": null
 				}
 			]

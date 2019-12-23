@@ -8,7 +8,8 @@
     "pages/playmusic/playmusic",
     "pages/comment/comment",
     "pages/commentlist/commentlist",
-    "pages/issue/issue"
+    "pages/issue/issue",
+    "pages/user/user"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -34,7 +35,7 @@
         "selectedIconPath": "images/home.png"
       },
       {
-        "pagePath": "pages/playlist/playlist",
+        "pagePath": "pages/user/user",
         "text": "我的",
         "iconPath": "images/un_home.png",
         "selectedIconPath": "images/home.png"

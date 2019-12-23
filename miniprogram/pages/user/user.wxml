@@ -1,0 +1,15 @@
+<view class="user">
+  <view class="oneline">
+    <image src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76"></image>
+    <view class="name">流川枫</view>
+  </view>
+  <view class="twoline">
+    <block wx:for="{{tabList}}" wx:key="{{item.id}}">
+      <view class="item">
+        <text class="iconfont icon-close close" bindtap="close"></text>
+        <text class="title">{{item.title}}</text>
+        <text class="iconfont icon-next_ui right" bindtap="close"></text>
+      </view>
+    </block>
+  </view>
+</view>
