@@ -1,7 +1,7 @@
 
 <view class="comment">
 <x-search></x-search>
-<block wx:for="{{5}}" wx:key="{{item.id}}">
+<block wx:for="{{5}}" wx:key="{{item.id}}" >
 <x-commentItem></x-commentItem>
 </block>
 <x-bottomWrite></x-bottomWrite>
