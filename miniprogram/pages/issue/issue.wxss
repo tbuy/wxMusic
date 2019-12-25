@@ -1,1 +1,70 @@
-/* pages/issue/issue.wxss */
+.issue {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+textarea {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 200rpx;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+}
+.upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+.image {
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: 14rpx;
+  border-radius: 10rpx;
+}
+.add {
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: 14rpx;
+  border: 1rpx solid #b4b4b4d0;
+  text-align: center;
+  border-radius: 10rpx;
+
+}
+.addImage {
+  font-size: 100rpx;
+  color: #d8d8d8d0;
+  line-height: 220rpx;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #f5f5f5;
+  height: 100rpx;
+  width: 100%;
+}
+.button {
+  border-radius: 10rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 140rpx;
+  float: right;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+
+.send {
+  border-radius: 10rpx;
+  text-align: center;
+  background-color: #d43c33;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 140rpx;
+  margin-top: 20rpx;
+  color: #fff;
+  float: right;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+}

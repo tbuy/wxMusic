@@ -1,5 +1,34 @@
 <view class="playmusic">
   <view class="bg"></view>
-  <image src="../../images/disk.png" class="disk"></image>
+  <image src="../../images/disk.png" class="disk" bindtap="changeDisk" wx:if="{{isShowDisk}}"></image>
+  <view class="lrc" bindtap="changeDisk" wx:else>
+    <view>规则缺席</view>
+    <view>亦真亦假的玩具</view>
+    <view>还握在你手里</view>
+    <view>吃透温柔的暴力就不称奇</view>
+    <view>我的黑框眼镜在Assad湖边走火</view>
+    <view>风马牛齐聚</view>
+    <view>你被带走时我亲吻了你下颌的伤疤</view>
+    <view>表情很平静</view>
+    <view>你是大千世界一汪清泉</view>
+    <view>还是泉边那只神秘孔雀</view>
+    <view>在和你灵魂谋面之前</view>
+    <view>让贪念趁火打劫</view>
+    <view>你是大千世界尘埃等闲</view>
+    <view>也是我仅有的风花雪月</view>
+    <view>爱死或是恨终我都感谢</view>
+    <view>万花筒里消受幻影碎片</view>
+     <view>风马牛齐聚</view>
+    <view>你被带走时我亲吻了你下颌的伤疤</view>
+    <view>表情很平静</view>
+    <view>你是大千世界一汪清泉</view>
+    <view>还是泉边那只神秘孔雀</view>
+    <view>在和你灵魂谋面之前</view>
+    <view>让贪念趁火打劫</view>
+    <view>你是大千世界尘埃等闲</view>
+    <view>也是我仅有的风花雪月</view>
+    <view>爱死或是恨终我都感谢</view>
+    <view>万花筒里消受幻影碎片</view>
+  </view>
   <musicPlayer></musicPlayer>
 </view>

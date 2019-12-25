@@ -18,6 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goIssue(){
+      wx.navigateTo({
+        url: '/pages/issue/issue',
+      })
+    }
   }
 })

@@ -6,9 +6,9 @@ Page({
    */
   data: {
     tabList: [
-      { id: 1, title: '最近播放', router: '' },
-      { id: 2, title: '我的发现', router: '' },
-      { id: 3, title: '小程序二维码', router: '' },
+      { id: 1, title: '最近播放', router: '', icon: 'icon-paixingbang' },
+      { id: 2, title: '我的发现', router: '', icon: 'icon-faxian' },
+      { id: 3, title: '小程序二维码', router: '', icon: 'icon-erweima' },
     ]
   },
 

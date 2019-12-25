@@ -1,2 +1,14 @@
-<!--pages/issue/issue.wxml-->
-<text>pages/issue/issue.wxml</text>
+<view class="issue">
+  <textarea placeholder="请填写内容" auto-focus maxlength="120" />
+  <view class="upload">
+    <image class="image" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76" wx:for="{{5}}" wx:key="{{item.id}}"></image>
+    <view class="add">
+      <text class="iconfont addImage icon-add-fill"></text>
+    </view>
+    <view class="image" style="height: 0"></view>
+  </view>
+</view>
+<view class="footer">
+  <view class="send">发布</view>
+  <view class="button">取消</view>
+</view>

@@ -4,9 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isShowDisk: true
   },
-
+  changeDisk(){
+    this.setData({
+      isShowDisk: !this.data.isShowDisk
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

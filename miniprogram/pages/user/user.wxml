@@ -6,9 +6,9 @@
   <view class="twoline">
     <block wx:for="{{tabList}}" wx:key="{{item.id}}">
       <view class="item">
-        <text class="iconfont icon-close close" bindtap="close"></text>
+        <text class="iconfont {{item.icon}}" style="color: #d43c33"></text>
         <text class="title">{{item.title}}</text>
-        <text class="iconfont icon-next_ui right" bindtap="close"></text>
+        <text class="iconfont icon-next_ui right"></text>
       </view>
     </block>
   </view>
