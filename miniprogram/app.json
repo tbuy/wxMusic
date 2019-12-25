@@ -2,9 +2,6 @@
   "pages": [
     "pages/playlist/playlist",
     "pages/musiclist/musiclist",
-    "pages/blog/blog",
-    "pages/profile/profile",
-    "pages/demo/demo",
     "pages/playmusic/playmusic",
     "pages/comment/comment",
     "pages/commentlist/commentlist",

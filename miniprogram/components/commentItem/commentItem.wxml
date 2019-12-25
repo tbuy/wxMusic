@@ -1,4 +1,4 @@
-<view class="item" bindtap="goCommentlist">
+<view class="item" catchtap="goCommentlist">
   <view class="oneline">
     <image class="header" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76"></image>
     <view class="info">
@@ -12,7 +12,7 @@
     <image class="image" style="height: 0"></image>
   </view>
   <view class="fourline">
-    <view class="pubBtn">评论</view>
-    <view class="pubBtn">分享</view>
+    <view class="pubBtn" catchtap="goComment">评论</view>
+    <view class="pubBtn" catchtap="share">分享</view>
   </view>
 </view>

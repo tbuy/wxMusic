@@ -5,9 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isShowWrite: false
   },
- 
+  comment(e){
+    this.setData({
+      isShowWrite: e.detail.isShowWrite
+    })
+  },
+  close(e){
+    this.setData({
+      isShowWrite: e.detail.isShowWrite
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

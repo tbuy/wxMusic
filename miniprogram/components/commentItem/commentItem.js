@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    
   },
 
   /**
@@ -23,5 +23,12 @@ Component({
         url: '/pages/commentlist/commentlist',
       })
     },
+    goComment() {
+      this.triggerEvent('eventComment', { isShowWrite: true});
+    },
+    share(){
+      console.log(2)
+      wx.shareAppMessage()
+    }
   }
 })

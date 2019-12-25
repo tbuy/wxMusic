@@ -19,7 +19,7 @@ Component({
    */
   methods: {
     close(){
-      console.log(11)
+      this.triggerEvent('eventClose', { isShowWrite: false });
     }
   }
 })
