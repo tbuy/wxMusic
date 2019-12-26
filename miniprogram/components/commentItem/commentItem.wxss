@@ -56,4 +56,9 @@
   text-align: center;
   line-height: 80rpx;
   font-size: 30rpx;
+  color: #000;
+  background-color: #fff;
+  height: 80rpx;
+  font-weight: 500;
+  padding: 0;
 }

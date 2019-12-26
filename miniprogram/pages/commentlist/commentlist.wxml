@@ -1,5 +1,5 @@
 <view class="commentlist">
-  <x-commentItem></x-commentItem>
+  <x-commentItem isClick="{{false}}"></x-commentItem>
   <view class="list">
     <view class="title">评论列表</view>
     <block wx:for="{{4}}" wx:key="{{item.id}}">

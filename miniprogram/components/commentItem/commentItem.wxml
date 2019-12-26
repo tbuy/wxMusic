@@ -11,8 +11,9 @@
     <image class="image" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76" wx:for="{{5}}" wx:key="{{item.id}}"></image>
     <image class="image" style="height: 0"></image>
   </view>
+  
   <view class="fourline">
     <view class="pubBtn" catchtap="goComment">评论</view>
-    <view class="pubBtn" catchtap="share">分享</view>
+    <button open-type='share' class="pubBtn" catchtap="goShare">分享</button>
   </view>
 </view>

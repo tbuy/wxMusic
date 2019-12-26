@@ -1,14 +1,21 @@
 <view class="issue">
-  <textarea placeholder="请填写内容" auto-focus maxlength="120" />
+<view class="textarea">
+  <textarea placeholder="请填写内容" auto-focus maxlength="120" value="{{content}}"/>
+  <view class="textNum">{{content.length}} / 120</view>
+</view>
+
   <view class="upload">
-    <image class="image" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76" wx:for="{{5}}" wx:key="{{item.id}}"></image>
-    <view class="add">
-      <text class="iconfont addImage icon-add-fill"></text>
+    <view wx:for="{{imageList}}" wx:key="{{item.id}}" class="image" >
+      <image src="{{item}}"></image>
+      <text class="iconfont icon-close del" bindtap="del" data-idx="{{index}}"></text>
+    </view>
+    <view class="add" wx:if="{{imageList.length < 6}}">
+      <text class="iconfont addImage icon-add-fill" bindtap="uploadImage"></text>
     </view>
     <view class="image" style="height: 0"></view>
   </view>
 </view>
 <view class="footer">
-  <view class="send">发布</view>
-  <view class="button">取消</view>
+  <view class="send" bindtap="send">发布</view>
+  <view class="button" bindtap="cancel">取消</view>
 </view>

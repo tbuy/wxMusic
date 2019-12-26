@@ -2,7 +2,7 @@
   <text class="iconfont icon-bianji" bindtap="goIssue"></text>
   <view class="searchInput">
     <text class="iconfont icon-search searchIcon"></text>
-     <input class="input" auto-focus placeholder="请输入关键字"/>
+     <input class="input" placeholder="请输入关键字"/>
   </view>
   <view class="searchBtn">搜索</view>
 </view>

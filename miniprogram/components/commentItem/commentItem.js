@@ -4,7 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    //是否开启点击跳转
+    isClick:{
+      type: Boolean,
+      value: true
+    }
   },
 
   /**
@@ -19,16 +23,15 @@ Component({
    */
   methods: {
     goCommentlist() {
-      wx.navigateTo({
-        url: '/pages/commentlist/commentlist',
-      })
+      if (this.isClick){
+        wx.navigateTo({
+          url: '/pages/commentlist/commentlist',
+        })
+      }
     },
     goComment() {
       this.triggerEvent('eventComment', { isShowWrite: true});
     },
-    share(){
-      console.log(2)
-      wx.shareAppMessage()
-    }
+    goShare(){}
   }
 })
