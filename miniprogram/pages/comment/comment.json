@@ -3,5 +3,6 @@
     "x-search": "/components/search/search",
     "x-commentItem": "/components/commentItem/commentItem",
     "x-bottomWrite": "/components/bottomWrite/bottomWrite"
-  }
+  },
+  "enablePullDownRefresh":true
 }

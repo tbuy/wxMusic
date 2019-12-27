@@ -8,6 +8,10 @@ Component({
     isClick:{
       type: Boolean,
       value: true
+    },
+    blog: {
+      type: Object,
+      value: {}
     }
   },
 
@@ -23,9 +27,9 @@ Component({
    */
   methods: {
     goCommentlist() {
-      if (this.isClick){
+      if (this.data.isClick){
         wx.navigateTo({
-          url: '/pages/commentlist/commentlist',
+          url: '/pages/commentlist/commentlist?id=' + this.data.blog._id ,
         })
       }
     },

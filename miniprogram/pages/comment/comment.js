@@ -1,11 +1,8 @@
-// pages/comment/comment.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  PAGECOUNT: 10,
   data: {
-    isShowWrite: false
+    isShowWrite: false,
+    bloglist: []
   },
   comment(e){
     this.setData({
@@ -17,59 +14,41 @@ Page({
       isShowWrite: e.detail.isShowWrite
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  _getBlogList(){
+    wx.showLoading({
+      title: '加载中...',
+    })
+    wx.cloud.callFunction({
+      name: 'music',
+      data:{
+        $url: 'bloglist',
+        start: this.data.bloglist.length,
+        count: this.PAGECOUNT,
+      },
+      success:res=>{
+        this.setData({
+          bloglist: [...this.data.bloglist,...res.result.data]
+        })
+      },
+      fail:()=>{},
+      complete:()=>{
+        wx.hideLoading()
+        wx.stopPullDownRefresh();
+
+      }
+    })
+  },
   onLoad: function (options) {
-
+    this._getBlogList()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
-
+    this.setData({
+      bloglist:[]
+    })
+    this._getBlogList()
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
-
+    this._getBlogList()
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

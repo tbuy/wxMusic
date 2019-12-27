@@ -32,6 +32,24 @@ exports.main = async (event, context) => {
       return res
     })
   });
+  //获取发现列表
+  app.router('bloglist',async(ctx,next) => {
+    ctx.body = await db.collection('bloglist').skip(event.start).limit(event.count).get().then(res=>{
+      return res
+    })
+  })
+  //获取发现详情
+   app.router('blogDetail',async(ctx,next)=>{
+     ctx.body = await db.collection('bloglist').where({_id: event.id }).get().then(res => {
+       return res
+     })
+   })
+   //获取评论列表
+    app.router('commentlist', async (ctx, next) => {
+      ctx.body = await db.collection('commentlist').where({blogId: event.id }).get().then(res => {
+        return res
+      })
+    })
   return app.serve()
 
 }

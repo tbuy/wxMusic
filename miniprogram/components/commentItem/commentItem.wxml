@@ -1,14 +1,14 @@
 <view class="item" catchtap="goCommentlist">
   <view class="oneline">
-    <image class="header" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76"></image>
+    <image class="header" src="{{blog.avatar}}"></image>
     <view class="info">
-      <view class="name">流川枫</view>
-      <view class="time">2019-03-04 12：00：21</view>
+      <view class="name">{{blog.name}}</view>
+      <view class="time">{{blog.createTime}}</view>
     </view>
   </view>
-  <view class="twoline">吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼哈哈哈哈哈哈哈哈哈哈哈哈哈哈嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡哇哇哇哇哇哇哇哇哇哇哇呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃</view>
+  <view class="twoline">{{blog.content}}</view>
   <view class="threeline">
-    <image class="image" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76" wx:for="{{5}}" wx:key="{{item.id}}"></image>
+    <image class="image" src="{{item}}" wx:for="{{blog.imagelist}}" wx:key="{{item.id}}"></image>
     <image class="image" style="height: 0"></image>
   </view>
   

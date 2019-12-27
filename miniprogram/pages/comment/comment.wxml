@@ -1,9 +1,9 @@
 <view class="comment">
   <x-search></x-search>
-  <block wx:for="{{5}}" wx:key="{{item.id}}">
-    <x-commentItem bind:eventComment="comment"></x-commentItem>
+  <block wx:for="{{bloglist}}" wx:key="{{item.id}}">
+    <x-commentItem bind:eventComment="comment" blog="{{item}}"></x-commentItem>
   </block>
   <block wx:if="{{isShowWrite}}">
-    <x-bottomWrite bind:eventClose="close"></x-bottomWrite>
+    <x-bottomWrite bind:eventClose="close" ></x-bottomWrite>
   </block>
 </view>

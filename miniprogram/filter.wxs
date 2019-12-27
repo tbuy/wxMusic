@@ -1,0 +1,16 @@
+
+
+module.exports = {
+  timeFilter: val => {
+    var date = new Date(val);
+    var y = date.getFullYear();
+    var M = date.getMonth() + 1;
+    M = M > 9 ? M : '0' + M;
+    var d = date.getDate();
+    d = d > 9 ? d : '0' + d;
+    var h = date.getHours;
+    var m = date.getMinutes();
+    var s = data.getSeconds();
+    //2019:02:04 12:02:02
+   }
+};

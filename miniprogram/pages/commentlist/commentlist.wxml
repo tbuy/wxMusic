@@ -1,15 +1,15 @@
 <view class="commentlist">
-  <x-commentItem isClick="{{false}}"></x-commentItem>
+  <x-commentItem isClick="{{false}}" blog="{{blogDetail}}"></x-commentItem>
   <view class="list">
     <view class="title">评论列表</view>
-    <block wx:for="{{4}}" wx:key="{{item.id}}">
+    <block wx:for="{{commentlist}}" wx:key="{{item.id}}">
       <view class="item">
         <view class="oneline">
-          <image class="header" src="https://t12.baidu.com/it/u=23452940,1521604703&fm=76"></image>
-          <view class="name">流川枫</view>
+          <image class="header" src="{{item.avatar}}"></image>
+          <view class="name">{{item.name}}</view>
         </view>
-        <view class="twoline">好听极了</view>
-        <view class="threeline">2019-03-04 12：00：21</view>
+        <view class="twoline">{{item.content}}</view>
+        <view class="threeline">{{item.createTime}}</view>
       </view>
     </block>
   </view>
