@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "x-commentItem": "/components/commentItem/commentItem"
+    "x-commentItem": "/components/commentItem/commentItem",
+    "x-bottomWrite": "/components/bottomWrite/bottomWrite"
   }
 }

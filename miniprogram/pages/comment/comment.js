@@ -14,6 +14,7 @@ Page({
       isShowWrite: e.detail.isShowWrite
     })
   },
+
   _getBlogList(){
     wx.showLoading({
       title: '加载中...',

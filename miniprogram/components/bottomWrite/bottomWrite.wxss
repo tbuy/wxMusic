@@ -30,6 +30,7 @@ textarea {
   position: absolute;
   right: 50rpx;
   bottom: 40rpx;
+  z-index: 3;
 }
 .close {
   font-size: 30rpx;

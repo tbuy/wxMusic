@@ -1,16 +1,35 @@
 
-
-module.exports = {
-  timeFilter: val => {
-    var date = new Date(val);
+function timeFilter(time){
+    var date = getDate(time);
     var y = date.getFullYear();
     var M = date.getMonth() + 1;
     M = M > 9 ? M : '0' + M;
     var d = date.getDate();
     d = d > 9 ? d : '0' + d;
-    var h = date.getHours;
+    var h = date.getHours();
+    h = h > 9 ? h : '0' + h;
     var m = date.getMinutes();
-    var s = data.getSeconds();
-    //2019:02:04 12:02:02
-   }
+    m = m > 9 ? m : '0' + m;
+    var s = date.getSeconds();
+    s = s > 9 ? s : '0' + s;
+    return y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s
+}
+function dateFilter(time) {
+  var date = getDate(time);
+  var y = date.getFullYear();
+  var M = date.getMonth() + 1;
+  M = M > 9 ? M : '0' + M;
+  var d = date.getDate();
+  d = d > 9 ? d : '0' + d;
+  var h = date.getHours();
+  h = h > 9 ? h : '0' + h;
+  var m = date.getMinutes();
+  m = m > 9 ? m : '0' + m;
+  var s = date.getSeconds();
+  s = s > 9 ? s : '0' + s;
+  return y + '-' + M + '-' + d 
+}
+module.exports = {
+  timeFilter: timeFilter,
+  dateFilter: dateFilter
 };

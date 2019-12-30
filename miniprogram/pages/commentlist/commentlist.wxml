@@ -1,16 +1,20 @@
-<view class="commentlist">
-  <x-commentItem isClick="{{false}}" blog="{{blogDetail}}"></x-commentItem>
+<wxs src="../../filter.wxs" module="filter"></wxs>
+<view class="commentlist" wx:if="{{Object.keys(blogDetail).length != 0 && commentlist.length != 0}}">
+  <x-commentItem isClick="{{false}}" blog="{{blogDetail}}" bind:eventComment="comment"></x-commentItem>
   <view class="list">
     <view class="title">评论列表</view>
     <block wx:for="{{commentlist}}" wx:key="{{item.id}}">
       <view class="item">
         <view class="oneline">
-          <image class="header" src="{{item.avatar}}"></image>
+          <image class="header" src="{{item.avatar || '/images/avatar.png'}}"></image>
           <view class="name">{{item.name}}</view>
         </view>
         <view class="twoline">{{item.content}}</view>
-        <view class="threeline">{{item.createTime}}</view>
+        <view class="threeline">{{filter.timeFilter(item.createTime)}}</view>
       </view>
     </block>
   </view>
 </view>
+  <block wx:if="{{isShowWrite}}">
+    <x-bottomWrite bind:eventClose="close" ></x-bottomWrite>
+  </block>

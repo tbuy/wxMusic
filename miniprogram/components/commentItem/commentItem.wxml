@@ -1,9 +1,10 @@
+<wxs src="../../filter.wxs" module="filter"></wxs>
 <view class="item" catchtap="goCommentlist">
   <view class="oneline">
     <image class="header" src="{{blog.avatar}}"></image>
     <view class="info">
       <view class="name">{{blog.name}}</view>
-      <view class="time">{{blog.createTime}}</view>
+      <view class="time">{{filter.timeFilter(blog.createTime)}}</view>
     </view>
   </view>
   <view class="twoline">{{blog.content}}</view>

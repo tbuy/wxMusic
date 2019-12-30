@@ -50,6 +50,20 @@ exports.main = async (event, context) => {
         return res
       })
     })
+    //插入评论
+    app.router('addComment', async (ctx, next) => {
+      ctx.body = await db.collection('commentlist').add({
+        data:{
+          avatar:'',
+          blogId:'ddf81c77-1731-41e4-84d1-3b41569c55f6',
+          content: event.content,
+          createTime: (new Date()).getTime(),
+          name: '樱木花道'
+        }
+      }).then(res => {
+        return res
+      })
+    })
   return app.serve()
 
 }
