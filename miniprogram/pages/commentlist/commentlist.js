@@ -22,6 +22,12 @@ Page({
       isShowWrite: e.detail.isShowWrite
     })
   },
+  send(){
+    this.setData({
+      commentlist: []
+    })
+    this._getCommentlist();
+  },
   _getBlogDetail(){
     wx.cloud.callFunction({
       name: 'music',

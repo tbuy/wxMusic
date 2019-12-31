@@ -20,7 +20,6 @@ Component({
   methods: {
     close(){
       this.triggerEvent('eventClose', { isShowWrite: false });
-
     },
     inputContent(e){
       this.setData({
@@ -50,6 +49,7 @@ Component({
         complete: () => {
           this.close()
           wx.hideLoading()
+          this.triggerEvent('eventSend');
         }
       })
     },

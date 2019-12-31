@@ -44,6 +44,21 @@ exports.main = async (event, context) => {
        return res
      })
    })
+   //插入发现
+   app.router('addBlog', async(ctx,next) => {
+     ctx.body = await db.collection('bloglist').add({
+       data:{
+         avatar: '',
+         commentlist: [],
+         content: event.content,
+         createTime: (new Date()).getTime(),
+         name: '樱木花道',
+         imagelist: []
+       }
+     }).then(res =>{
+       return res
+     })
+   })
    //获取评论列表
     app.router('commentlist', async (ctx, next) => {
       ctx.body = await db.collection('commentlist').where({blogId: event.id }).get().then(res => {

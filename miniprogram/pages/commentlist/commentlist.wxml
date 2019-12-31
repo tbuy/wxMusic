@@ -16,5 +16,5 @@
   </view>
 </view>
   <block wx:if="{{isShowWrite}}">
-    <x-bottomWrite bind:eventClose="close" ></x-bottomWrite>
+    <x-bottomWrite bind:eventClose="close" bind:eventSend="send"></x-bottomWrite>
   </block>
