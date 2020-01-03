@@ -1,15 +1,15 @@
 <view class="issue">
 <view class="textarea">
-  <textarea placeholder="请填写内容" auto-focus maxlength="120" value="{{content}}"/>
+  <textarea placeholder="请填写内容" auto-focus maxlength="120" value="{{content}}" bindinput="inputContent" />
   <view class="textNum">{{content.length}} / 120</view>
 </view>
 
   <view class="upload">
-    <view wx:for="{{imageList}}" wx:key="{{item.id}}" class="image" >
+    <view wx:for="{{imagelist}}" wx:key="{{item.id}}" class="image" >
       <image src="{{item}}"></image>
       <text class="iconfont icon-close del" bindtap="del" data-idx="{{index}}"></text>
     </view>
-    <view class="add" wx:if="{{imageList.length < 6}}">
+    <view class="add" wx:if="{{imagelist.length < 6}}">
       <text class="iconfont addImage icon-add-fill" bindtap="uploadImage"></text>
     </view>
     <view class="image" style="height: 0"></view>

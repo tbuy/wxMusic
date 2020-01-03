@@ -53,7 +53,7 @@ exports.main = async (event, context) => {
          content: event.content,
          createTime: (new Date()).getTime(),
          name: '樱木花道',
-         imagelist: []
+         imagelist: event.imagelist
        }
      }).then(res =>{
        return res

@@ -1,9 +1,9 @@
 <wxs src="../../filter.wxs" module="filter"></wxs>
-<view class="commentlist" wx:if="{{Object.keys(blogDetail).length != 0 && commentlist.length != 0}}">
+<view class="commentlist" wx:if="{{Object.keys(blogDetail).length != 0}}">
   <x-commentItem isClick="{{false}}" blog="{{blogDetail}}" bind:eventComment="comment"></x-commentItem>
   <view class="list">
     <view class="title">评论列表</view>
-    <block wx:for="{{commentlist}}" wx:key="{{item.id}}">
+    <block wx:for="{{commentlist}}" wx:key="{{item.id}}"  wx:if="{{commentlist.length != 0}}" >
       <view class="item">
         <view class="oneline">
           <image class="header" src="{{item.avatar || '/images/avatar.png'}}"></image>
